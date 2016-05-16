@@ -1,7 +1,7 @@
 # Snatch
 Python code to steal chrome cookie, history and login data files and send them to an email address. 
 
-Function:
+Functions:
 
 -> def cookiestealer(): It copies the Cookie, History and Login Data file to a secure directory located in C:\Users\Public\Intel\Logs
 
