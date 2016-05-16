@@ -1,8 +1,15 @@
 import os
+import errno
 import shutil
 import socket
+import base64
+import smtplib
 import getpass
 import datetime,time
+from email import Encoders
+from email.MIMEBase import MIMEBase
+from email.MIMEText import MIMEText
+from email.MIMEMultipart import MIMEMultipart
 
 currentdir = os.getcwd()
 curentuser = getpass.getuser()
