@@ -1,5 +1,5 @@
 # Snatch
-Python code to steal chrome cookie, history and login data files and send them to an email address. 
+Python code to steal chrome cookie, history and login data files and send them to an email address. It only works for windows users at the moment.
 
 # Functions
 
